@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block main %}
+<div id="flex_button_msg">
+    <form id="uploadForm" class="row">
+        <div class="col-auto">
+            <input type="file" name="file" id="excelFile" class="form-control" accept=".xlsx" required />
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-success">上傳並轉換</button>
+        </div>
+    </form>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <img src="../static/img/flex_button_msg.jpg" alt="">
+            </div>
+            <!-- <div class="col">
+            Column
+            </div> -->
+        </div>
+    </div>
+</div>
+{% endblock %}

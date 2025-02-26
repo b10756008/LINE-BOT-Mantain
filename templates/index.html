@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery -->
+    <script src="{{url_for('static',filename='package/jquery-3.7.1.min.js')}}"></script>
+
+    <script src="{{url_for('static',filename='package/xlsx.full.min.js')}}"></script>
+    <!-- boostrap-5.3.3 -->
+    <link rel="stylesheet" href="{{url_for('static',filename='package/bootstrap-5.3.3/bootstrap.min.css')}}">
+    <script src="{{url_for('static',filename='package/bootstrap-5.3.3/bootstrap.bundle.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+</head>
+<body>
+    <div class="container-fluid" style="padding-left:0;">
+        <div class="d-flex flex-column p-3 text-bg-dark" style="width:15vw;position:fixed;height:100vh;">
+            <div id="title">
+                <img class="bi pe-none me-2" src="../static/img/line.png">
+                <span class="fw-bold">LINE BOT維護</span>
+            </div>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <button class="page_btn btn btn-dark" data-page="flex_button_msg">
+                        純文字按鈕型
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="page_btn btn btn-dark" data-page="youtube_video">
+                        影片型
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div id = "main">
+            {% block main %}{% endblock %}
+        </div>
+    </div>
+</body>
+<script src="static/js/index.js"></script>
+</html>
