@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = "reponses"
+UPLOAD_FOLDER = "responses"
 
 @app.route('/',methods=['POST','GET'])
 def index():
