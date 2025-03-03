@@ -60,7 +60,8 @@ def upload_file():
         }
 
  # 将 JSON 数据保存为文件
-    json_filename = f"{file.filename}.json"
+    filename = (file.filename).split('.')[0]
+    json_filename = f"{filename}.json"
     json_path = os.path.join("uploads", json_filename)
 
     # 确保保存目录存在
